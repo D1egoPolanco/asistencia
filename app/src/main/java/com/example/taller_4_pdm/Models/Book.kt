@@ -3,26 +3,26 @@ package com.example.taller_4_pdm.Models
 import android.os.Parcel
 import android.os.Parcelable
 //Falta Modificar
-data class Book (
-    val Caratula : String,
-    val Titulo : String,
-    val Autores : ArrayList<String>,
-    val Edicion : Int,
-    val Editorial : String,
-    val ISBN: String,
-    val Resumen : String,
-    val Tag : ArrayList<String>,
-    val Favorito : Boolean
+data class Book(
+    val Caratula: String = "N/A",
+    val Titulo: String = "N/A",
+    val Autores: ArrayList<Author>? = null ,
+    val Edicion: Int = 0,
+    val Editorial: String = "N/A",
+    val ISBN: String = "N/A",
+    val Resumen: String = "N/A",
+    val Tag: ArrayList<String>? = null,
+    val Favorito: Boolean = false
 ): Parcelable {
     constructor(parcel : Parcel):this(
             Caratula = parcel.readString(),
             Titulo = parcel.readString(),
-            Autores = parcel.createStringArrayList(),
+            Autores = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<Author>?,
             Edicion = parcel.readInt(),
             Editorial = parcel.readString(),
             ISBN = parcel.readString(),
             Resumen = parcel.readString(),
-            Tag = parcel.createStringArrayList(),
+            Tag = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<String>?,
             Favorito = parcel.readByte() != 0.toByte()
     )
     //Falta modificar

@@ -34,7 +34,7 @@ class ContentFragment : Fragment() {
     }
 
     fun bindData(view: View){
-        view.tv_title_book_activity = book
+        view.tv_title_book_activity
         view.tv_autores
         view.tv_caratula
         view.tv_edicion
