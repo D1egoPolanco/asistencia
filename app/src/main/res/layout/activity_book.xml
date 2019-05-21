@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_title_book_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_caratula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_autores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_edicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_editoriales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nothing"
+        android:padding="@dimen/padding_tv"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_tv"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_favorite"/>
+
+</LinearLayout>
