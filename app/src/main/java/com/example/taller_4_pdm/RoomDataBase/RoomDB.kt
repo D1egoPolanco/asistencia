@@ -25,7 +25,7 @@ public abstract class RoomDB : RoomDatabase(){
 
             synchronized(this){
                 val instance = Room
-                    .databaseBuilder(context, RoomDB::class.java, "Repo_DB")
+                    .databaseBuilder(context, RoomDB::class.java, "Book_DB")
                     .build()
                 INSTANCE = instance
                 return instance
