@@ -6,23 +6,23 @@ import android.os.Parcelable
 data class Book(
     val Caratula: String = "N/A",
     val Titulo: String = "N/A",
-    val Autores: ArrayList<Author>? = null ,
+    val Autores: ArrayList<Author> = arrayListOf() ,
     val Edicion: Int = 0,
     val Editorial: String = "N/A",
     val ISBN: String = "N/A",
     val Resumen: String = "N/A",
-    val Tag: ArrayList<String>? = null,
+    val Tag: ArrayList<String> = arrayListOf(),
     val Favorito: Boolean = false
 ): Parcelable {
     constructor(parcel : Parcel):this(
             Caratula = parcel.readString(),
             Titulo = parcel.readString(),
-            Autores = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<Author>?,
+            Autores = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<Author>,
             Edicion = parcel.readInt(),
             Editorial = parcel.readString(),
             ISBN = parcel.readString(),
             Resumen = parcel.readString(),
-            Tag = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<String>?,
+            Tag = parcel.readArrayList(Book.javaClass.classLoader) as ArrayList<String>,
             Favorito = parcel.readByte() != 0.toByte()
     )
     //Falta modificar
