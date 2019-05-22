@@ -9,8 +9,6 @@ import java.security.PrivateKey
 
 @Entity(tableName = "BookTable")
 data class BookEntity (
-    @PrimaryKey(autoGenerate = true)
-    val id_book : Long = 0,
     //val id_author_book : Long,
 
     @ColumnInfo(name = "b_caratula")
@@ -18,7 +16,7 @@ data class BookEntity (
     @ColumnInfo(name = "b_titulo")
     val Titulo: String,
     @ColumnInfo(name = "b_autores")
-    val Autores: ArrayList<Author>?,
+    val Autores: List<Author>?,
     @ColumnInfo(name = "b_edicion")
     val Edicion: Int,
     @ColumnInfo(name = "b_editorial")
@@ -28,7 +26,11 @@ data class BookEntity (
     @ColumnInfo(name = "b_resumen")
     val Resumen: String,
     @ColumnInfo(name = "b_tags")
-    val Tag: ArrayList<String>?,
+    val Tag: List<String>?,
     @ColumnInfo(name = "b_favorito")
     val Favorito: Boolean
 )
+{
+    @PrimaryKey(autoGenerate = true)
+    val id_book : Long = 0
+}

@@ -4,8 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.taller_4_pdm.RoomDataBase.Daos.AuthorDao
+import com.example.taller_4_pdm.RoomDataBase.Daos.BookDao
+import com.example.taller_4_pdm.RoomDataBase.Daos.EditorialDao
+import com.example.taller_4_pdm.RoomDataBase.Daos.TagDao
 
-@Database(entities = [BookDao::class], version = 1, exportSchema = false)
+@Database(entities = [AuthorDao::class,BookDao::class,EditorialDao::class,TagDao::class], version = 1, exportSchema = false)
 public abstract class RoomDB : RoomDatabase(){
 
     abstract fun bookDao() : BookDao
