@@ -25,7 +25,7 @@ data class BookEntity (
     @ColumnInfo(name = "b_tags")
     val Tag: String = "N/A",
     @ColumnInfo(name = "b_favorito")
-    val Favorito: Boolean = false
+    val Favorito: Int = 0
 )
 {
     @PrimaryKey(autoGenerate = true)
