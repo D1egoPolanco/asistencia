@@ -24,6 +24,8 @@ class BookAdapter( var items : List<Book>, val clickListener : (Book) -> Unit) :
     }
 
 
+
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: Book,clickListener: (Book) -> Unit) = with(itemView) {
