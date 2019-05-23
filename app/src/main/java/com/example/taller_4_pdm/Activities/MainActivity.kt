@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             it.putString(Constants.TEXT_KEY_EDITORIAL, item.ISBN)
             it.putInt(Constants.TEXT_KEY_EDICION, item.Edicion)
             it.putString(Constants.TEXT_KEY_TAG, item.Tag.toString())
-            it.putBoolean(Constants.TEXT_KEY_FAVORITE, item.Favorito)
+            it.putInt(Constants.TEXT_KEY_FAVORITE, item.Favorito)
 
             startActivity(Intent(this, Activity_Book::class.java).putExtras(it))
             bookViewModel.allBooks.value
