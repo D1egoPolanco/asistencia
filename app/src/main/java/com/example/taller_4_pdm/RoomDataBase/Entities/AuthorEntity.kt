@@ -1,7 +1,6 @@
 package com.example.taller_4_pdm.RoomDataBase.Entities
 
 import androidx.room.*
-import com.example.taller_4_pdm.Models.Book
 
 @Entity(tableName = "AuthorTable")
 data class AuthorEntity (

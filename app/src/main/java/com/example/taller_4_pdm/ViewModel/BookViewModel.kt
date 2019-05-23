@@ -4,10 +4,12 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.taller_4_pdm.Models.Book
 import com.example.taller_4_pdm.Repository.BookRepository
+import com.example.taller_4_pdm.RoomDataBase.Entities.AuthorEntity
 import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
 import com.example.taller_4_pdm.RoomDataBase.RoomDB
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class BookViewModel(application: Application) : AndroidViewModel(application){
     private val repository : BookRepository
@@ -22,6 +24,13 @@ class BookViewModel(application: Application) : AndroidViewModel(application){
         allBooks = repository.allBooks
 
     }
+
+    fun insertAutor(authorEntity: AuthorEntity){
+        viewModelScope.launch ( Dispatchers.IO){
+            repository.insertAutor(authorEntity)
+        }
+    }
+
 
 
 }
