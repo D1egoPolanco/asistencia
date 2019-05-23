@@ -11,8 +11,9 @@ data class AuthorEntity (
     @ColumnInfo(name = "a_name")
     val name:String,
     @ColumnInfo(name = "a_books_written")
-    val books_written: List<Book>
-){
+    val books_written: List<Book>?
+)
+{
     @PrimaryKey(autoGenerate = true)
     val id_author : Long = 0
 }/*

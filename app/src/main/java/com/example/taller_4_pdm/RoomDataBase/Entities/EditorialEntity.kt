@@ -9,7 +9,7 @@ data class EditorialEntity(
     @ColumnInfo(name = "e_name")
     val name : String,
     @ColumnInfo(name = "e_printed_books")
-    val printed_books : List<String>
+    val printed_books : List<String>?
 )
 {
     @PrimaryKey(autoGenerate = true)
