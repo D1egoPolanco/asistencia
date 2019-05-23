@@ -17,6 +17,9 @@ interface BookDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(table : BookEntity)
 
+    @Query("UPDATE booktable SET b_favorito = true WHERE id_book = :id")
+    fun addToFavorites(id : Long)
+
     @Query("DELETE FROM booktable")
     fun nuke()
 
