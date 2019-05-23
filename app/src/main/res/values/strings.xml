@@ -3,7 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_to_favorite">+ Add to Favorite</string>
+    <string name="add_to_favorite">+ Agregar a favoritos</string>
     <string name="text_nothing">N/A</string>
     <string name="titulo">Titulo:</string>
     <string name="caratula">Caratula:</string>
@@ -13,4 +13,6 @@
     <string name="editoriales">Editoriales:</string>
     <string name="resumen">Resumen:</string>
     <string name="tag_s">Tag(s):</string>
+    <string name="ingresa_los_datos">Ingresa los datos</string>
+    <string name="agregar">AGREGAR</string>
 </resources>
