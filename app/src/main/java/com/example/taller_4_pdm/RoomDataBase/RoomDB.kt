@@ -87,7 +87,7 @@ public abstract class RoomDB : RoomDatabase(){
                         "¿Cuales son las razones por las que vale la pena nacer, morir y matar? la historia de Meursault " +
                         "reaviva nuestro intento por dar respuesta a estas preguntas",
                 "SCI-FI,ACTION,ADVENTURE",
-                1
+                0
             )
             var editorial1 = EditorialEntity("Mateu Cromo S.A.", "El extranjero")
             /*var tag11 = Tag("Morir")
@@ -101,6 +101,28 @@ public abstract class RoomDB : RoomDatabase(){
             tagDao.insert(tag13)*/
             authorDao.insert(author1)
             editorialDao.insert(editorial1)
+            ////////////////////libro 2//////////////////////
+            var book2 = BookEntity(
+                "La luna.jpg",
+                "El principito",
+                "Antoine de Saint-Exupéry",
+                1,
+                "Santillana S.A.",
+                "978-84-7888-628-9",
+                "Viví así, solo, sin nadie con quien hablar verdaderamente, hasta que tuve una avería en el desierto del Sahara, " +
+                        "hace seis años. Algo se había roto en mi motor. Y como no tenía conmigo ni mecánico ni pasajeros, me dispuse a realizar, " +
+                        "solo, una reparación difícil. Era, para mí, cuestión de vida o muerte. Tenía agua apenas para ocho días.\n" +
+                        "La primera noche dormí sobre la arena a mil millas de toda tierra habitada. Estaba más aislado que un náufrago sobre una balsa en medio del océano. " +
+                        "Imaginaos, pues, mi sorpresa cuando, al romper el día, me despertó una extraña vocecita que decía:\n" +
+                        "-Por favor..., ¡dibújame un cordero!",
+                "AVENTURA, NIÑOS, SCI'FI",
+                1
+            )
+            var editorial2 = EditorialEntity("Mateu Cromo S.A.", "El extranjero")
+            var author2 = AuthorEntity("Albert Camus", "El extranjero")
+            bookDao.insert(book2)
+            authorDao.insert(author2)
+            editorialDao.insert(editorial2)
         }
     }
 }
