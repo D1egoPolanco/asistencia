@@ -10,5 +10,5 @@ data class TagEntity (
     val name : String
 ){
     @PrimaryKey(autoGenerate = true)
-    val id_tag : Long = 0
+    var id_tag : Long = 0
 }

@@ -16,7 +16,7 @@ data class BookEntity (
     @ColumnInfo(name = "b_titulo")
     val Titulo: String,
     @ColumnInfo(name = "b_autores")
-    val Autores: List<Author>?,
+    val Autores: String,
     @ColumnInfo(name = "b_edicion")
     val Edicion: Int,
     @ColumnInfo(name = "b_editorial")
@@ -26,11 +26,11 @@ data class BookEntity (
     @ColumnInfo(name = "b_resumen")
     val Resumen: String,
     @ColumnInfo(name = "b_tags")
-    val Tag: List<String>?,
+    val Tag: String,
     @ColumnInfo(name = "b_favorito")
     val Favorito: Boolean
 )
 {
     @PrimaryKey(autoGenerate = true)
-    val id_book : Long = 0
+    var id_book : Long = 0
 }

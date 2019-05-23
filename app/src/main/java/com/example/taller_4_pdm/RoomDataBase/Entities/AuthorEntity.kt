@@ -1,9 +1,6 @@
 package com.example.taller_4_pdm.RoomDataBase.Entities
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.example.taller_4_pdm.Models.Book
 
 @Entity(tableName = "AuthorTable")
@@ -11,11 +8,12 @@ data class AuthorEntity (
     @ColumnInfo(name = "a_name")
     val name:String,
     @ColumnInfo(name = "a_books_written")
-    val books_written: List<Book>?
+    val books_written: String
+
 )
 {
     @PrimaryKey(autoGenerate = true)
-    val id_author : Long = 0
+    var id_author : Long = 0
 }/*
 @Entity(foreignKeys = arrayOf(
     ForeignKey(entity = AuthorEntity::class,

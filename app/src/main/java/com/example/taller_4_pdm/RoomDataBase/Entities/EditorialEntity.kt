@@ -9,9 +9,9 @@ data class EditorialEntity(
     @ColumnInfo(name = "e_name")
     val name : String,
     @ColumnInfo(name = "e_printed_books")
-    val printed_books : List<String>?
+    val printed_books : String
 )
 {
     @PrimaryKey(autoGenerate = true)
-    val id_editorial : Long = 0
+    var id_editorial : Long = 0
 }
