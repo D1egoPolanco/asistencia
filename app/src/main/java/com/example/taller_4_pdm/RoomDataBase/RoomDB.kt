@@ -87,7 +87,7 @@ public abstract class RoomDB : RoomDatabase(){
                         "¿Cuales son las razones por las que vale la pena nacer, morir y matar? la historia de Meursault " +
                         "reaviva nuestro intento por dar respuesta a estas preguntas",
                 "SCI-FI,ACTION,ADVENTURE",
-                true
+                1
             )
             var editorial1 = EditorialEntity("Mateu Cromo S.A.", "El extranjero")
             /*var tag11 = Tag("Morir")
