@@ -17,6 +17,9 @@ interface BookDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(table : BookEntity)
 
+    @Query("DELETE FROM booktable")
+    fun nuke()
+
     @Query("SELECT * FROM BookTable WHERE id_book = :id")
     fun getByBookId(id : Long) : LiveData<BookEntity>
     @Query("SELECT * FROM BookTable WHERE b_titulo = :name")
