@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
 
 
-        bookViewModel.allBooks.observe(this, Observer {result ->
+        bookViewModel.allBooks().observe(this, Observer {result ->
             viewAdapter.dataChange(result)
         })
 
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             it.putInt(Constants.TEXT_KEY_FAVORITE, item.Favorito)
 
             startActivity(Intent(this, Activity_Book::class.java).putExtras(it))
-            bookViewModel.allBooks.value
+            bookViewModel.allBooks().value
         }
     }
 }
