@@ -7,17 +7,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.taller_4_pdm.Models.Book
 import com.example.taller_4_pdm.R
+import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
 import kotlinx.android.synthetic.main.fragment_content.view.*
 
 class ContentFragment : Fragment() {
 
-    var book = Book()
+    var book = BookEntity()
     private var listener: OnFragmentInteractionListener? = null
 
     companion object{
-        fun newInstance(book: Book):ContentFragment{
+        fun newInstance(book: BookEntity):ContentFragment{
             val newFragment = ContentFragment()
             newFragment.book = book
             return newFragment

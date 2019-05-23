@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.taller_4_pdm.Models.Author
 import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
 
 @Dao
