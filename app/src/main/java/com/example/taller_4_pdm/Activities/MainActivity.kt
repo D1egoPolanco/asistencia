@@ -40,8 +40,12 @@ class MainActivity : AppCompatActivity() {
 
         bookViewModel.allBooks().value
 
+
 /*
         bookViewModel.allBooks.observe(this, Observer {result ->
+=======
+        bookViewModel.allBooks().observe(this, Observer {result ->
+>>>>>>> 63aa91edef8bd7f3adfb0d128e18a087f76763ab
             viewAdapter.dataChange(result)
         })*/
 
@@ -80,7 +84,11 @@ class MainActivity : AppCompatActivity() {
             it.putInt(Constants.TEXT_KEY_FAVORITE, item.Favorito)
 
             startActivity(Intent(this, Activity_Book::class.java).putExtras(it))
+
             //bookViewModel.allBooks.value
+
+            bookViewModel.allBooks().value
+
         }
     }
 }
