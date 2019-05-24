@@ -39,7 +39,7 @@ class BookRepository  (private val bookDao:BookDao, private val authorDao: Autho
     fun getBookByEditorial(editorial: String) = bookDao.getByEditoral(editorial)
     fun getBookByEdicion(edicion: Int) = bookDao.getByEdicion(edicion)
     fun getBookByISBN(isbn: String) = bookDao.getByISBN(isbn)
-    fun getFavoBooks(fav: Boolean) = bookDao.getFavoritos(fav)
+    fun getFavoBooks(fav: Int) = bookDao.getFavoritos(fav)
 
 
     @WorkerThread

@@ -3,6 +3,9 @@ package com.example.taller_4_pdm.Activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -16,10 +19,32 @@ import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
 import com.example.taller_4_pdm.Utils.Constants
 import com.example.taller_4_pdm.ViewModel.BookViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+        var id = p0.itemId
+        when(id){
+            R.id.nav_1 ->{
+                bookViewModel.allBooks().observe(this, Observer {
+                    viewAdapter.dataChange(it)
+                })
+                return true
+            }
+            R.id.nav_2 ->{
+                bookViewModel.getFavoBooks(1).observe(this, Observer {
+                    viewAdapter.dataChange(it)
+                })
+                return true
+            }
+            else->{
+                return false
+            }
+        }
+    }
 
     private lateinit var bookViewModel: BookViewModel
     var twoPane = false
@@ -37,7 +62,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        nav_view.setNavigationItemSelectedListener(this)
+
         initRecycle(emptyList())
+
+        if(fragment_content != null){
+            twoPane = true
+            mainContentFragment = ContentFragment.newInstance(BookEntity())
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_content, ContentFragment()).commit()
+        }
 
        bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
 
@@ -48,9 +81,9 @@ class MainActivity : AppCompatActivity() {
 
     fun initRecycle(books : List<BookEntity>){
         if(twoPane){
-            viewManager = LinearLayoutManager(this)
-        }else{
             viewManager = GridLayoutManager(this, 2)
+        }else{
+            viewManager = LinearLayoutManager(this)
         }
 
         viewAdapter = BookAdapter(books,{ bookitem: BookEntity-> bookItemClicked(bookitem)})
@@ -67,18 +100,10 @@ class MainActivity : AppCompatActivity() {
             mainContentFragment = ContentFragment.newInstance(item)
             supportFragmentManager.beginTransaction().replace(R.id.fragment_content, ContentFragment()).commit()
         }else{
-            val it = Bundle()
-            it.putString(Constants.TEXT_KEY_CARATULA, item.Caratula)
-            it.putString(Constants.TEXT_KEY_TITULO, item.Titulo)
-            it.putString(Constants.TEXT_KEY_AUTORES, item.Autores.toString())
-            it.putString(Constants.TEXT_KEY_RESUMEN, item.Resumen)
-            it.putString(Constants.TEXT_KEY_EDITORIAL, item.Editorial)
-            it.putString(Constants.TEXT_KEY_EDITORIAL, item.ISBN)
-            it.putInt(Constants.TEXT_KEY_EDICION, item.Edicion)
-            it.putString(Constants.TEXT_KEY_TAG, item.Tag.toString())
-            it.putInt(Constants.TEXT_KEY_FAVORITE, item.Favorito)
-
-            startActivity(Intent(this, Activity_Book::class.java).putExtras(it))
+            var intento = Intent(this@MainActivity,Activity_Book::class.java)
+            intento.putExtra(item.Titulo,Constants.TEXT_KEY_TITULO)
+            startActivity(intento)
+            Log.d("Book: ", item.Titulo)
         }
     }
 }

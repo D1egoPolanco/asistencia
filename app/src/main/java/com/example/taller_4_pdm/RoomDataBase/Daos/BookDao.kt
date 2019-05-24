@@ -43,5 +43,5 @@ interface BookDao {
         }
     }*/
     @Query("SELECT * FROM BookTable WHERE b_favorito = :fav")
-    fun getFavoritos(fav : Boolean) : LiveData<List<BookEntity>>
+    fun getFavoritos(fav : Int) : LiveData<List<BookEntity>>
 }

@@ -50,7 +50,7 @@ class BookViewModel(application: Application) : AndroidViewModel(application){
     fun getBookByEditorial(editorial: String) = repository.getBookByEditorial(editorial)
     fun getBookByEdicion(edicion: Int) = repository.getBookByEdicion(edicion)
     fun getBookByISBN(isbn: String) = repository.getBookByISBN(isbn)
-    fun getFavoBooks(fav: Boolean) = repository.getFavoBooks(fav)
+    fun getFavoBooks(fav: Int) = repository.getFavoBooks(fav)
 
     // Funciones de insertar
 
