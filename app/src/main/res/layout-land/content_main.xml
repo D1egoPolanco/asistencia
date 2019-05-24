@@ -14,7 +14,6 @@
             android:id="@+id/book_list"
             android:layout_width="@dimen/list_width"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
             android:background="@android:color/white"/>
 
     <FrameLayout

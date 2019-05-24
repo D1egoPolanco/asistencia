@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/edicion"
         android:layout_margin="@dimen/margin_tv"
-        android:inputType="text"/>
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/et_editorial"
@@ -66,6 +66,7 @@
         android:inputType="text"/>
 
     <Button
+            android:id="@+id/bt_agregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/agregar"

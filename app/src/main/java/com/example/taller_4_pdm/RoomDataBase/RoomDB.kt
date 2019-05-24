@@ -43,7 +43,6 @@ public abstract class RoomDB : RoomDatabase(){
             synchronized(this){
                 val instance = Room
                     .databaseBuilder(context, RoomDB::class.java, "Book_DB")
-                    .addCallback(DataBaseCallback(scope))
                     .build()
                 INSTANCE = instance
                 return instance
@@ -73,8 +72,6 @@ public abstract class RoomDB : RoomDatabase(){
             tagDao: TagDao,
             authorDao: AuthorDao
         ) {
-            bookDao.nuke()
-
             var book1 = BookEntity(
                 "El extrangero.jpg",
                 "El extranjero",
@@ -111,10 +108,7 @@ public abstract class RoomDB : RoomDatabase(){
                 "9788478886289",
                 "Viví así, solo, sin nadie con quien hablar verdaderamente, hasta que tuve una avería en el desierto del Sahara, " +
                         "hace seis años. Algo se había roto en mi motor. Y como no tenía conmigo ni mecánico ni pasajeros, me dispuse a realizar, " +
-                        "solo, una reparación difícil. Era, para mí, cuestión de vida o muerte. Tenía agua apenas para ocho días.\n" +
-                        "La primera noche dormí sobre la arena a mil millas de toda tierra habitada. Estaba más aislado que un náufrago sobre una balsa en medio del océano. " +
-                        "Imaginaos, pues, mi sorpresa cuando, al romper el día, me despertó una extraña vocecita que decía:\n" +
-                        "-Por favor..., ¡dibújame un cordero!",
+                        "solo, una reparación difícil. Era, para mí, cuestión de vida o muerte. Tenía agua apenas para ocho días.\n",
                 "AVENTURA, NIÑOS, SCI-FI, CLASICO, BEST SELLER",
                 1
             )
@@ -136,9 +130,7 @@ public abstract class RoomDB : RoomDatabase(){
                         "un caballero andante, nombrándose a sí mismo como don Quijote de la Mancha. Sus intenciones " +
                         "son ayudar a los pobres y desfavorecidos, y lograr el amor de la supuesta Dulcinea del Toboso," +
                         " que es en realidad es una campesina llamada Aldonza Lorenzo. Decide nombrar a Sancho Panza, " +
-                        "un empleado suyo, su escudero. Juntos viven muchas aventuras y tras ser vencido por el " +
-                        "Caballero de la Blanca Luna se retira a su hogar, donde, tras adquirir de nuevo la cordura, " +
-                        "fallece.",
+                        "un empleado suyo, su escudero.",
                 "AVENTURA, SCI-FI, CLASICO, BEST SELLER",
                 1
             )
@@ -161,13 +153,7 @@ public abstract class RoomDB : RoomDatabase(){
                         "súbitamente. Es el primer caso de una «ceguera blanca» que se expande de manera fulminante. " +
                         "Internados en cuarentena o perdidos en la ciudad, los ciegos tendrán que enfrentarse con lo " +
                         "que existe de más primitivo en la naturaleza humana: la voluntad de sobrevivir a cualquier " +
-                        "precio.Ensayo sobre la ceguera es la ficción de un autor que nos alerta sobre " +
-                        "«la responsabilidad de tener ojos cuando otros los perdieron». José Saramago traza en este " +
-                        "libro una imagen aterradora y conmovedora de los tiempos que estamos viviendo. En un mundo " +
-                        "así, ¿cabrá alguna esperanza?El lector conocerá una experiencia imaginativa única. En un " +
-                        "punto donde se cruzan literatura y sabiduría, José Saramago nos obliga a parar, cerrar los " +
-                        "ojos y ver. Recuperar la lucidez y rescatar el afecto son dos propuestas fundamentales de " +
-                        "una novela que es, también, una reflexión sobre la ética del amor y la solidaridad.",
+                        "precio.",
                 "FILOSOFIA, BEST SELLER, SCI-FI",
                 0
             )

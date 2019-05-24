@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.taller_4_pdm.R
 import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
+import kotlinx.android.synthetic.main.book_cardview.view.*
 import kotlinx.android.synthetic.main.fragment_content.view.*
 
 class ContentFragment : Fragment() {
@@ -33,14 +34,14 @@ class ContentFragment : Fragment() {
     }
 
     fun bindData(view: View){
-        view.tv_title_book_activity
-        view.tv_autores
-        view.tv_caratula
-        view.tv_edicion
-        view.tv_editoriales
-        view.tv_isbn
-        view.tv_resumen
-        view.tv_tag
+        view.tv_title_book_activityf.text = book.Titulo
+        view.tv_autoresf.text = book.Autores
+        view.tv_caratulaf.text = book.Caratula
+        view.tv_edicionf.text = book.Edicion.toString()
+        view.tv_editorialesf.text = book.Editorial
+        view.tv_isbnf.text = book.ISBN
+        view.tv_resumenf.text = book.Resumen
+        view.tv_tagf.text = book.Tag
     }
 
 

@@ -6,6 +6,10 @@
 
     <TextView
         android:id="@+id/tv_title_book"
+
+        android:padding="@dimen/padding"
+        android:text="HOla"
+        android:layout_margin="@dimen/margin_tv"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

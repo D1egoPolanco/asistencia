@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,7 +13,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/titulo"
+            android:id="@+id/titulof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/titulo"
@@ -21,7 +22,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_title_book_activity"
+            android:id="@+id/tv_title_book_activityf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -36,7 +37,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/caratula"
+            android:id="@+id/caratulaf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/caratula"
@@ -45,7 +46,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_caratula"
+            android:id="@+id/tv_caratulaf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/autores"
+            android:id="@+id/autoresf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/autores"
@@ -68,7 +69,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_autores"
+            android:id="@+id/tv_autoresf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -84,7 +85,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/edicion"
+            android:id="@+id/edicionf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edicion"
@@ -93,7 +94,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_edicion"
+            android:id="@+id/tv_edicionf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -108,7 +109,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/editoriales"
+            android:id="@+id/editorialesf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/editoriales"
@@ -117,7 +118,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_editoriales"
+            android:id="@+id/tv_editorialesf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -133,7 +134,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/isbn"
+            android:id="@+id/isbnf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/isbn"
@@ -142,7 +143,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_isbn"
+            android:id="@+id/tv_isbnf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -157,7 +158,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/resumen"
+            android:id="@+id/resumenf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/resumen"
@@ -166,7 +167,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_resumen"
+            android:id="@+id/tv_resumenf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -181,7 +182,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tag"
+            android:id="@+id/tagf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tag_s"
@@ -190,7 +191,7 @@
             android:layout_margin="@dimen/margin_tv"/>
 
         <TextView
-            android:id="@+id/tv_tag"
+            android:id="@+id/tv_tagf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_nothing"
@@ -201,8 +202,17 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_to_favorite"/>
+            android:id="@+id/bt_agregar_favoritof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_favorite"
+            android:visibility="invisible"/>
+
+    <Button
+            android:id="@+id/bt_borrar_favoritof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eliminar_de_favorito"
+            android:visibility="invisible"/>
 
 </LinearLayout>

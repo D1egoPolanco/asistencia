@@ -15,4 +15,5 @@
     <string name="tag_s">Tag(s):</string>
     <string name="ingresa_los_datos">Ingresa los datos</string>
     <string name="agregar">AGREGAR</string>
+    <string name="eliminar_de_favorito">- Eliminar de Favorito</string>
 </resources>
