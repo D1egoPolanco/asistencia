@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.fragment_content.view.*
 class ContentFragment : Fragment() {
 
     var book = BookEntity()
-    private var listener: OnFragmentInteractionListener? = null
 
     companion object{
         fun newInstance(book: BookEntity):ContentFragment{
@@ -44,26 +43,5 @@ class ContentFragment : Fragment() {
         view.tv_tag
     }
 
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
-    }
 
 }

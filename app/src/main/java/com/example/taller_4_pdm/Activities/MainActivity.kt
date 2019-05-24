@@ -16,6 +16,7 @@ import com.example.taller_4_pdm.RoomDataBase.Entities.BookEntity
 import com.example.taller_4_pdm.Utils.Constants
 import com.example.taller_4_pdm.ViewModel.BookViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,35 +26,26 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewAdapter: BookAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var mainContentFragment: ContentFragment
-   // val floatingButton = findViewById<FloatingActionButton>(R.id.fab)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.content_main)
+        setContentView(R.layout.activity_main)
 
 
-       /* floatingButton.setOnClickListener {
+       fab.setOnClickListener {
             val intent = Intent(this@MainActivity, NewBookActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
-        //initRecycle(emptyList())
+        initRecycle(emptyList())
 
-       /* bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
+       bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
 
         bookViewModel.allBooks().observe(this, Observer {
             viewAdapter.dataChange(it)
         })
-*/
-
-/*
-        bookViewModel.allBooks.observe(this, Observer {result ->
-        bookViewModel.allBooks().observe(this, Observer {result ->
-            viewAdapter.dataChange(result)
-        })*/
-
     }
-/*
+
     fun initRecycle(books : List<BookEntity>){
         if(twoPane){
             viewManager = LinearLayoutManager(this)
@@ -87,11 +79,6 @@ class MainActivity : AppCompatActivity() {
             it.putInt(Constants.TEXT_KEY_FAVORITE, item.Favorito)
 
             startActivity(Intent(this, Activity_Book::class.java).putExtras(it))
-
-            //bookViewModel.allBooks.value
-
-           // bookViewModel.allBooks().value
-
         }
-    }*/
+    }
 }

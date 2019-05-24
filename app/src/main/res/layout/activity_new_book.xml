@@ -21,47 +21,55 @@
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/titulo"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/et_autores"
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/autores"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"
+    />
 
     <EditText
         android:id="@+id/et_edicion"
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/edicion"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/et_editorial"
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/editoriales"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/et_resumen"
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/resumen"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/et_isbn"
         android:layout_width= "@dimen/et_width"
         android:layout_height="wrap_content"
         android:hint="@string/isbn"
-        android:layout_margin="@dimen/margin_tv"/>
+        android:layout_margin="@dimen/margin_tv"
+        android:inputType="text"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/agregar"/>
+        android:text="@string/agregar"
+        android:inputType="text"/>
 
 
 </LinearLayout>

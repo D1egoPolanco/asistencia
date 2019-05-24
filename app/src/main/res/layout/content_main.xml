@@ -8,6 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main"
     tools:context=".Activities.MainActivity"
+    android:orientation="vertical"
     android:background="#fff">
 
     <androidx.recyclerview.widget.RecyclerView
