@@ -34,7 +34,6 @@ class BookAdapter( var items : List<BookEntity>, val clickListener : (BookEntity
         fun bind(item: BookEntity,clickListener: (BookEntity) -> Unit) = with(itemView) {
             tv_title_book.text = item.Titulo
             this.setOnClickListener{clickListener(item)}
-
         }
     }
 }

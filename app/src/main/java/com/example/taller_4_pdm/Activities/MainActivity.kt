@@ -25,32 +25,35 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewAdapter: BookAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var mainContentFragment: ContentFragment
+   // val floatingButton = findViewById<FloatingActionButton>(R.id.fab)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
 
-        val floatingButton = findViewById<FloatingActionButton>(R.id.fab)
-        floatingButton.setOnClickListener {
+
+       /* floatingButton.setOnClickListener {
             val intent = Intent(this@MainActivity, NewBookActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
-        bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
+        //initRecycle(emptyList())
 
-        bookViewModel.allBooks().value
+       /* bookViewModel = ViewModelProviders.of(this).get(BookViewModel::class.java)
 
+        bookViewModel.allBooks().observe(this, Observer {
+            viewAdapter.dataChange(it)
+        })
+*/
 
 /*
         bookViewModel.allBooks.observe(this, Observer {result ->
-=======
         bookViewModel.allBooks().observe(this, Observer {result ->
->>>>>>> 63aa91edef8bd7f3adfb0d128e18a087f76763ab
             viewAdapter.dataChange(result)
         })*/
 
     }
-
+/*
     fun initRecycle(books : List<BookEntity>){
         if(twoPane){
             viewManager = LinearLayoutManager(this)
@@ -87,8 +90,8 @@ class MainActivity : AppCompatActivity() {
 
             //bookViewModel.allBooks.value
 
-            bookViewModel.allBooks().value
+           // bookViewModel.allBooks().value
 
         }
-    }
+    }*/
 }
