@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taller_4_PDM</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="add_to_favorite">+ Agregar a favoritos</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="autores">Autor(es):</string>
+    <string name="caratula">Caratula:</string>
+    <string name="edicion">Edicion:</string>
+    <string name="editoriales">Editoriales:</string>
+    <string name="eliminar_de_favorito">- Eliminar de favoritos</string>
+    <string name="ingresa_los_datos">Ingresa los datos</string>
+    <string name="isbn">ISBN:</string>
+    <string name="resumen">Resumen:</string>
+    <string name="tag_s">Tag(s):</string>
+    <string name="text_nothing">N/A</string>
+    <string name="titulo">Titulo:</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+</resources>
